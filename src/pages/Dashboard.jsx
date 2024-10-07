@@ -14,7 +14,7 @@ const Dashboard = () => {
     } else {
       const fetchExpenses = async () => {
         try {
-          const response = await axios.get('http://localhost:5000/api/expenses', {
+          const response = await axios.get('https://expense-tracker-be-hq67.onrender.com/api/expenses', {
             headers: { Authorization: `Bearer ${token}` },
           });
           setExpenses(response.data);
@@ -29,7 +29,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/expenses/${id}`, {
+      await axios.delete(`https://expense-tracker-be-hq67.onrender.com/api/expenses/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setExpenses(expenses.filter((expense) => expense._id !== id)); // Remove from state

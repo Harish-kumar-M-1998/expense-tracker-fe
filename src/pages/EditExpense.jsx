@@ -12,7 +12,7 @@ const EditExpense = () => {
 
   useEffect(() => {
     const fetchExpense = async () => {
-      const response = await axios.get(`http://localhost:5000/api/expenses/${id}`, {
+      const response = await axios.get(`https://expense-tracker-be-hq67.onrender.com/api/expenses/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const { title, amount } = response.data;
@@ -28,7 +28,7 @@ const EditExpense = () => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/expenses/${id}`,
+        `https://expense-tracker-be-hq67.onrender.com/api/expenses/${id}`,
         { title, amount },
         { headers: { Authorization: `Bearer ${token}` } }
       );

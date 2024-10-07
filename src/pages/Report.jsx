@@ -11,7 +11,7 @@ const Report = () => {
   useEffect(() => {
     if (token) {
       const fetchExpenses = async () => {
-        const response = await axios.get('http://localhost:5000/api/expenses', {
+        const response = await axios.get('https://expense-tracker-be-hq67.onrender.com/api/expenses', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setExpenses(response.data);

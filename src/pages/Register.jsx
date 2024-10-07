@@ -20,7 +20,7 @@ const Register = () => {
 
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/auth/register', {
+      await axios.post('https://expense-tracker-be-hq67.onrender.com/api/auth/register', {
         username,
         email,
         password,

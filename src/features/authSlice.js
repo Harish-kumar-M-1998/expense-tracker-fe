@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const loginUser = createAsyncThunk('auth/loginUser', async (userData) => {
-  const response = await axios.post('http://localhost:5000/api/auth/login', userData);
+  const response = await axios.post('https://expense-tracker-be-hq67.onrender.com/api/auth/login', userData);
   return response.data;
 });
 
